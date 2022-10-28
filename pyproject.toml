@@ -5,11 +5,15 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 packages = [{include = "minimal_cython_nthreads_example"}]
+build = 'build.py'
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+cython = "3.0.0a11"
 
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0", "cython==3.0.0a11"]
 build-backend = "poetry.core.masonry.api"
